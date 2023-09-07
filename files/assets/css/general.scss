@@ -1,0 +1,25 @@
+@import "variables";
+
+body {
+  font-family: 'open-sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header, .bg-gray .ce_text, .bg-white .ce_text,
+.footer {
+  width: 90%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+
+

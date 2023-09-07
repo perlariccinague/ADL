@@ -1,0 +1,48 @@
+@import "variables";
+
+#footer {
+  background: white;
+  .inside {
+    background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
+    border-top-right-radius: 150px;
+  }
+}
+
+.footer {
+  .footer-middle {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .mod_customnav {
+      width: 45%;
+      ul {
+        li {
+          padding: 10px 0;
+          text-transform: uppercase;
+          font: normal normal normal 18px/32px Open Sans;
+          a {
+            color: white;
+            position: relative;
+            padding-left: 30px;
+            &:before {
+              position: absolute;
+              content: "";
+              left: 0;
+              top: 2px;
+              width: 20px;
+              height: 20px;
+              background: url("/files/assets/layout/Akkordeon-1.svg") no-repeat 0/cover;
+            }
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid white;
+          }
+        }
+      }
+    }
+    .footer-right {
+      width: 45%;
+    }
+  }
+}

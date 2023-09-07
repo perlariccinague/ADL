@@ -1,0 +1,265 @@
+@import "variables";
+
+.banner-image {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+ /* padding-top: calc(1*1em);*/
+  .header-image {
+    img {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  width: 70px;
+  z-index: 200;
+  transform: translateY(-50%);
+  right: 0;
+  & > div {
+    position: relative;
+    width: 430px;
+    right: 0;
+    padding: 10px;
+    margin: 7px 0;
+    border-top-left-radius: 30px;
+    transition: right 250ms;
+    background-color: $rot;
+    height: 79px;
+    p {
+      font: normal normal normal 25px/32px Open Sans;
+      a {
+        padding-left: 58px;
+        color: #fff;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 28px;
+          left: 13px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    &:hover {
+      right: 230px;
+    }
+  }
+}
+
+.sidebar > div.contact p a:before {
+  background: url("/files/assets/layout/phone.svg") no-repeat center;
+}
+.sidebar  > div.mail, .sidebar > div.location  {
+  border-top-left-radius: 0;
+}
+
+.sidebar  > div.mail  p a:before {
+  background: url("/files/assets/layout/chat-right-dots-fill.svg") no-repeat center;
+}
+
+.sidebar > div.location p a:before {
+  background: url("/files/assets/layout/ios-location.svg") no-repeat center;
+  border: none;
+}
+
+.header-teaser {
+  position: relative;
+  z-index: 5;
+}
+
+.teaser {
+  position: absolute;
+  max-width: 1200px;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  width: 90%;
+  transform: translateX(-50%);
+  color: white;
+  h2 {
+    font: normal normal 600 70px/80px Open Sans;
+    text-transform: uppercase;
+  }
+  p {
+    font: normal normal 600 30px/50px Open Sans;
+    a {
+      color: black;
+      background: $lightness;
+      padding: 15px 40px;
+      border-radius: 30px 30px 30px 0;
+      text-transform: uppercase;
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+      transition: .2s transform ease-in-out;
+      &:before {
+        background-color: $yellow;
+        border-radius: 30px 30px 30px 0;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%, 0) rotate(4deg);
+        transform-origin: top left;
+        transition: .2s transform ease-out;
+        will-change: transform;
+        z-index: -1;
+      }
+      &:hover::before {
+        transform: translate(0, 0);
+      }
+      &:hover {
+        will-change: transform;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.rounded, .bg-gray, .bg-white {
+  position: relative;
+  z-index: 5;
+ background: white;
+  margin-top: -5px;
+}
+
+.rounded {
+  background: #fff url("/files/assets/layout/Stier.svg") no-repeat right bottom;
+}
+
+.bg-rot {
+  width: 80%;
+  border-bottom-right-radius: 30px;
+  background: transparent linear-gradient(120deg, #BB2631 0%, #5E1319 100%) 0 0 no-repeat;
+  padding: 10px 0;
+  .teaser-contain {
+    color: white;
+    max-width: 850px;
+    margin: 0 auto;
+    h2 {
+      font: normal normal 600 54px/60px Open Sans;
+      text-transform: uppercase;
+    }
+    p {
+      font: italic normal normal 26px/32px Open Sans;
+    }
+  }
+}
+
+.text-contain {
+  max-width: 800px;
+  margin: 50px auto;
+  p {
+    text-align: center;
+    font: italic normal normal 24px/36px Open Sans;
+  }
+}
+
+.box {
+  max-width: $max-width;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .ce_text {
+    width: 32%;
+    text-align: center;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    p {
+      font: normal normal normal 22px/30px Open Sans;
+      border-top: 2px solid $gray;
+      padding-top: 15px;
+      strong {
+        text-transform: uppercase;
+        font: normal normal 600 24px/30px Open Sans;
+      }
+    }
+  }
+}
+
+.bg-gray .contain {
+  background: transparent linear-gradient(229deg, #A3B4B5 0%, #525A5B 100%) 0% 0% no-repeat;
+  border-top-left-radius: 150px;
+  margin-top: -50px;
+  .ce_text {
+    margin: 50px auto;
+    color: white;
+    padding: 50px 0;
+    p {
+      font: normal normal normal 24px/36px Open Sans;
+    }
+  }
+  .ce_image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.bg-white #teaser.ce_text {
+  margin: 50px auto;
+  font: normal normal normal 24px/36px Open Sans;
+}
+
+.bg-white {
+  background: #fff url("/files/assets/layout/bär.svg") no-repeat left bottom;
+}
+
+.benefits {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+
+.benefit-top, .benefit-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .ce_text {
+    width: 45%;
+    h2 {
+      text-align: right;
+      font: normal normal bold 52px/52px Open Sans;
+      text-transform: uppercase;
+      color: $rot;
+    }
+  }
+  .left, .ce_text.box-yellow {
+    background: $yellow;
+    width: 45%;
+    height: 185px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font: normal normal 600 24px/30px Open Sans;
+   text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.benefit-top .left {
+  border-radius: 30px 30px 30px 0;
+}
+
+#left-box.ce_text.box-yellow {
+  border-radius: 30px 0 30px 30px;
+}
+
+#right-box.ce_text.box-yellow {
+  border-radius: 0 30px 30px 30px;
+}
+
