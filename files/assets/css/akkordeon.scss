@@ -1,0 +1,33 @@
+@import "variables";
+
+.ce_accordionStart.accordion {
+  margin: 0 auto;
+/*  padding: 0 0;*/
+  .toggler {
+    cursor: pointer;
+    color: white;
+    padding: 20px 70px;
+    font: normal normal 400 26px/34px Barlow;
+    position: relative;
+    background-image: url("/files/assets/layout/pudelwohl-mopsfidel-weimar-icon-akkordeon-plus-40px.svg");
+    background-size: 40px;
+    background-position: 0;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid white;
+    transition: color 250ms;
+    &.active {
+      background-image: url("/files/assets/layout/pudelwohl-mopsfidel-weimar-icon-akkordeon-minus-40px.svg");
+      border-bottom: 0;
+    }
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.ce_accordionStart.accordion {
+  .accordion-teaser {
+    margin: 0 auto;
+    padding: 0 0;
+  }
+}

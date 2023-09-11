@@ -1,0 +1,6 @@
+<div class="yellow-box"<?php echo $this->cssID ?>>
+      <a href="<?= $this->url  ?>">
+         <img src="{{file::<?= $this->image ?>}}" alt="">
+         <p><?= $this->description ?></p>
+      </a>
+</div>
