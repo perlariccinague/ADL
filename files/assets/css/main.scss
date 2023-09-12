@@ -87,38 +87,16 @@
   p {
     font: normal normal 600 30px/50px Open Sans;
     a {
-      color: black;
       background: $lightness;
-      padding: 15px 40px;
-      border-radius: 30px 30px 30px 0;
-      text-transform: uppercase;
-      overflow: hidden;
-      position: relative;
-      z-index: 0;
       &:after {
         background-color: $yellow;
-        border-radius: 30px 30px 30px 0;
-        content: '';
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform: translate(-100%, 0%) rotate(4deg);
-        transform-origin: top left;
-        transition: .2s transform ease-out;
-        will-change: transform;
-        z-index: -1;
-      }
-      &:hover::after {
-        transform: translate(0, 0) rotate(0);
       }
     }
   }
 }
 
-.rounded, .bg-gray, .bg-white {
+.rounded, .bg-gray, .bg-white, .bg-lightness,
+.bg-finance, .bg-planning {
   position: relative;
   z-index: 5;
  background: white;
@@ -133,6 +111,16 @@
   background-image: none;
 }
 
+.bg-lightness{
+  background: transparent linear-gradient(226deg, #A3B4B5 0%, #525A5B 100%) 0% 0% no-repeat;
+}
+
+.bg-planning {
+  background: #fff;
+}
+.bg-finance {
+  background: #FFB641 no-repeat;
+}
 
 .bg-rot {
   width: 80%;
@@ -141,8 +129,9 @@
   padding: 10px 0;
   .teaser-contain {
     color: white;
-    max-width: 745px;
+    max-width: 870px;
     margin: 0 auto;
+   /* margin-left: 25vw;*/
     h2 {
       font: normal normal 600 54px/60px Open Sans;
       text-transform: uppercase;
@@ -339,7 +328,7 @@
   }
 }
 
-.box-advice {
+/*.box-advice {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -366,7 +355,7 @@
     transition: .2s background-color ease-out;
     overflow: hidden;
     &:after {
-     /* background-color: $rot;*/
+     !* background-color: $rot;*!
       border-radius: 30px;
       content: "";
       display: block;
@@ -375,14 +364,14 @@
       position: absolute;
       left: 0;
       top: 0;
-      /*transform :translate(-100%, 0) rotate(10deg);*/
-    /*  transform-origin: top left;*/
+      !*transform :translate(-100%, 0) rotate(10deg);*!
+    !*  transform-origin: top left;*!
       transition: .2s transform ease-out, .2s background-color ease-out, 0.2s background ease-out;
       will-change: transform;
       z-index: -1;
     }
     &:hover:after {
-     /* transform: translate(0,0);*/
+     !* transform: translate(0,0);*!
       background-color: $rot;
     }
   }
@@ -421,7 +410,108 @@
   &:after {
     border-top-left-radius: 0;
   }
+}*/
+
+.image-text, .text-image {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.image-left, .image-right {
+  width: 35vw;
+}
+
+.text-left, .text-right {
+  width: 40vw;
+}
+
+.text-right {
+  text-align: right;
+  margin-right: 24%;
+}
+.text-left {
+  margin-left: 24%;
+}
+
+.image-text .image-left {
+  img {
+    border-bottom-right-radius: 130px;
+  }
+}
+
+.text-image .image-right {
+  img {
+    border-radius: 130px 130px 0 0;
+  }
+}
+
+.image-text .image-left {
+  img {
+    border-bottom-right-radius: 130px;
+  }
+}
+.image-text #rounded.image-left {
+  img {
+    border-radius: 130px 0;
+  }
+}
+.text-image #rounded.image-right {
+  img {
+    border-top-left-radius: 130px;
+  }
+}
+
+.image-text, .text-image {
+  .text-right, .text-left {
+    h2 {
+      font: normal normal bold 54px/60px Open Sans;
+      color: $rot;
+      text-transform: uppercase;
+    }
+    p {
+      font: normal normal normal 24px/36px Open Sans;
+    }
+  }
+}
+
+.text-image #color.text-left {
+  h2 {
+    color: black;
+  }
+  p {
+    color: white;
+  }
+}
+
+.image-text .text-right, .text-image .text-left {
+  p {
+    a {
+      background: $yellow;
+      font: normal normal 600 30px/50px Open Sans;
+      &:after {
+        background-color: $rot
+      }
+    }
+  }
+}
+
+.image-text .text-right p a {
+  &:after {
+    transform: translate(100%, 0%) rotate(-4deg);
+  }
+}
+.image-text #link-color.text-right p a {
+ background-color: $lightness;
+}
+
+.teaser-left {
+  font: normal normal normal 24px/36px Open Sans;
+  margin-bottom: 30px;
+}
+
 
 
 

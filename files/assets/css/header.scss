@@ -4,15 +4,17 @@
   position: absolute;
   width: 100%;
   z-index: 200;
-  .header {
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
-    position: relative;
+  height: 85vh;
+  .inside {
+    height: 100%;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+      position: relative;
+    }
   }
 }
-
-
 
 .header-right {
   .menu {
