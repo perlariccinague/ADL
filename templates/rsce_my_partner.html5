@@ -1,0 +1,6 @@
+<div class="contact">
+    <div class="contact-box">
+        <img src="{{file::<?= $this->image ?>}}" alt="">
+        <p><?= $this->text ?></p>
+    </div>
+</div>

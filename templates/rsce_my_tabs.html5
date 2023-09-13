@@ -1,0 +1,20 @@
+<div class="tabs" <?php echo $this->cssID ?>>
+    <div class="tab-content ">
+          <?= $this->feldname ?>
+         <img src="{{file::<?= $this->image ?>}}" alt="">
+    </div>
+    <div class="tab">
+        <p><?= $this->description ?></p>
+    </div>
+</div>
+
+
+<!--<div class="tabs" <?php /*echo $this->cssID */?>>
+        <?/*= $this->feldname */?>
+        <img src="{{file::<?/*= $this->image */?>}}" alt="">
+        <div class="tab">
+         <p><?/*= $this->description */?></p>
+       </div>
+</div>-->
+
+

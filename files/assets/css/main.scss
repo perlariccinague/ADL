@@ -96,7 +96,7 @@
 }
 
 .rounded, .bg-gray, .bg-white, .bg-lightness,
-.bg-finance, .bg-planning {
+.bg-finance, .bg-planning, .bg-yellow {
   position: relative;
   z-index: 5;
  background: white;
@@ -142,6 +142,8 @@
   }
 }
 
+
+
 .text-contain {
   max-width: 800px;
   margin: 50px auto;
@@ -183,7 +185,7 @@
   }
 }
 
-.bg-gray .contain {
+.bg-gray .contain, .bg-yellow .contain {
   background: transparent linear-gradient(229deg, #A3B4B5 0%, #525A5B 100%) 0% 0% no-repeat;
   border-top-left-radius: 150px;
   margin-top: -50px;
@@ -200,6 +202,11 @@
       width: 100%;
     }
   }
+}
+
+.bg-yellow .contain {
+  background: transparent linear-gradient(127deg, #FFB641 0%, #E19214 100%) 0% 0% no-repeat padding-box;
+  border-radius: 0 150px 0 0;
 }
 
 .bg-white #teaser.ce_text {
@@ -511,6 +518,147 @@
   font: normal normal normal 24px/36px Open Sans;
   margin-bottom: 30px;
 }
+
+#assets.teaser {
+  color: black;
+}
+
+.tab-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 100px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 23%;
+  align-items: center;
+  background: cornflowerblue;
+  text-align: center;
+  height: 250px;
+  clip-path: polygon(13% 50%, 0 32%, 0 0, 87% 0, 87% 33%, 100% 50%, 87% 67%, 87% 100%, 0 100%, 0 66%);
+  .tab-content {
+    width: 100%;
+  }
+}
+.tabs .tab-content label {
+  order: 1;
+  display: block;
+  padding: 1rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab p {
+  order: 9;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 20px;
+  background: $yellow;
+}
+.tab-content input[type="radio"] {
+  display: none;
+}
+.tab-content input[type="radio"]:checked + label{
+  background: crimson;
+}
+.tabs input[type="radio"]:checked + label ~ .tab p {
+  display: block;
+}
+
+/*.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+}
+.tabs label {
+  order: 1;
+  display: flex;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: #90CAF9;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 20px;
+  background: $yellow;
+}
+.tabs input[type="radio"] {
+  display: none;
+}
+.tabs input[type="radio"]:checked + label {
+  background: $yellow;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}*/
+
+#without-bg.rounded.yellow {
+  margin-top: -30px;
+}
+
+.border-teaser {
+  font: italic normal normal 24px/36px Open Sans;
+  margin: 50px auto 100px;
+  text-align: center;
+  border: 8px solid #FFB641;
+  border-radius: 50px 50px 50px 0;
+  position: relative;
+  p {
+    padding: 15px 45px;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    left: 100px;
+    top: 2px;
+    width: 50px;
+    height: 50px;
+    background: url("/files/assets/layout/before-rot.svg") no-repeat 0/cover;
+  }
+}
+
+.contact {
+  margin: 35px auto 130px;
+  text-align: center;
+}
+
+.contact-box {
+  background: white;
+  height: 480px;
+  width: 357px;
+  box-shadow: 4px 4px 13px #0000004F;
+  border-radius: 40px 40px 40px 0;
+  display: inline-block;
+  img {
+    width: 230px;
+    border-radius: 25px;
+    margin: 43px auto auto;
+  }
+  p {
+    font: normal normal normal 24px/36px Open Sans;
+    strong {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: $rot;
+    }
+    a {
+      color: black;
+    }
+  }
+}
+
 
 
 
