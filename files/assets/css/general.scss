@@ -37,7 +37,8 @@ ul, li {
   }
 }
 
-.teaser, .image-text .text-right, .text-image .text-left {
+.teaser, .image-text .text-right, .text-image .text-left,
+.bg-gray .contain .ce_text {
   p {
     font: normal normal 600 30px/50px Open Sans;
     a {
@@ -47,7 +48,9 @@ ul, li {
       text-transform: uppercase;
       overflow: hidden;
       position: relative;
+      will-change: transform;
       z-index: 0;
+      font-weight: 600;
       &:after {
         border-radius: 30px 30px 30px 0;
         content: '';
@@ -62,8 +65,9 @@ ul, li {
         transition: .2s transform ease-out;
         will-change: transform;
         z-index: -1;
+       /* background-color: yellow;*/
       }
-      &:hover::after {
+      &:hover:after {
         transform: translate(0, 0) rotate(0);
       }
     }

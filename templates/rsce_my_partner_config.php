@@ -10,11 +10,6 @@ return array(
         'type' => 'none',
     ),
     'fields' => array(
-        'titel' => array(
-            'label' => array('Überschrift', 'Beschreibung...'),
-            'eval' => array('rte' => 'tinyMCE'),
-            'inputType' => 'textarea',
-        ),
         'image' => array(
             'label' => array('Bild', 'Beschreibung...'),
             'eval' => array('filesOnly' => true),
@@ -28,6 +23,8 @@ return array(
         ),
     ),
 );
+
+
 
 
 

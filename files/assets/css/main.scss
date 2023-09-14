@@ -69,14 +69,21 @@
 
 .header-teaser {
   position: absolute;
-  max-width: $max-width;
-  top: 21%;
   left: 50%;
-  text-align: left;
-  width: 90%;
-  transform: translate(-50%, -100%);
-  color: white;
-  z-index: 2;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  height: 85vh;
+  .teaser {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    max-width: $max-width;
+    transform: translateX(-50%);
+    z-index: 200;
+    height: 85vh;
+    color: white;
+  }
 }
 
 .teaser {
@@ -95,8 +102,21 @@
   }
 }
 
+.bg-gray .contain .ce_text {
+  p a {
+    background-color: $yellow;
+    transition: 0.2s color ease-out;
+    &:after {
+      background-color: $rot;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 .rounded, .bg-gray, .bg-white, .bg-lightness,
-.bg-finance, .bg-planning, .bg-yellow {
+.bg-finance, .bg-planning {
   position: relative;
   z-index: 5;
  background: white;
@@ -167,8 +187,9 @@
   justify-content: space-between;
   align-items: center;
   .ce_text {
-    width: 32%;
+    width: 29%;
     text-align: center;
+    height: 310px;
     img {
       width: 100px;
       height: 100px;
@@ -185,7 +206,7 @@
   }
 }
 
-.bg-gray .contain, .bg-yellow .contain {
+.bg-gray .contain {
   background: transparent linear-gradient(229deg, #A3B4B5 0%, #525A5B 100%) 0% 0% no-repeat;
   border-top-left-radius: 150px;
   margin-top: -50px;
@@ -204,9 +225,21 @@
   }
 }
 
-.bg-yellow .contain {
+.bg-yellow {
   background: transparent linear-gradient(127deg, #FFB641 0%, #E19214 100%) 0% 0% no-repeat padding-box;
-  border-radius: 0 150px 0 0;
+  border-top-right-radius: 150px;
+  position: relative;
+  margin-top: -130px;
+  z-index: 6;
+}
+
+.contain .ce_text {
+  margin: 50px auto;
+  color: black;
+  padding: 50px 0;
+  p {
+    font: normal normal normal 24px/36px Open Sans;
+  }
 }
 
 .bg-white #teaser.ce_text {
@@ -516,7 +549,7 @@
 
 .teaser-left {
   font: normal normal normal 24px/36px Open Sans;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 #assets.teaser {
@@ -532,85 +565,68 @@
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  width: 23%;
-  align-items: center;
-  background: cornflowerblue;
-  text-align: center;
-  height: 250px;
-  clip-path: polygon(13% 50%, 0 32%, 0 0, 87% 0, 87% 33%, 100% 50%, 87% 67%, 87% 100%, 0 100%, 0 66%);
-  .tab-content {
-    width: 100%;
-  }
-}
-.tabs .tab-content label {
-  order: 1;
-  display: block;
-  padding: 1rem 0;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background ease 0.2s;
-}
-.tabs .tab p {
-  order: 9;
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
-  display: none;
-  padding: 20px;
-  background: $yellow;
-}
-.tab-content input[type="radio"] {
-  display: none;
-}
-.tab-content input[type="radio"]:checked + label{
-  background: crimson;
-}
-.tabs input[type="radio"]:checked + label ~ .tab p {
-  display: block;
-}
-
-/*.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  height: 300px;
 }
 .tabs label {
   order: 1;
-  display: flex;
+  display: block;
   padding: 1rem 2rem;
-  margin-right: 0.2rem;
   cursor: pointer;
-  background: #90CAF9;
   font-weight: bold;
-  justify-content: center;
-  align-items: center;
   transition: background ease 0.2s;
+  background: #90CAF9;
+  margin-right: 0.2rem;
+  text-align: center;
+  color: white;
+  span {
+    text-transform: uppercase;
+    display: block;
+    font: normal normal 600 24px/36px Open Sans;
+  }
 }
-.tabs .tab {
-  order: 99; // Put the tabs last
+.tabs .tab  {
+  order: 9;
+  flex-grow: 1;
   width: 100%;
-  height: 100%;
   display: none;
   padding: 20px;
   background: $yellow;
+  font: normal normal normal 24px/36px Open Sans;
+  color: white;
 }
 .tabs input[type="radio"] {
   display: none;
 }
-.tabs input[type="radio"]:checked + label {
+.tabs input[type="radio"]:checked + label{
+  background: $yellow;
+  color: black;
+  img {
+    filter: invert(1);
+  }
+}
+.tabs input[type="radio"]:checked + label ~ .tab  {
+  display: inline-flex;
+}
+
+#tabone-content, #one .tab  {
   background: $yellow;
 }
-.tabs input[type="radio"]:checked + label + .tab {
-  display: block;
-}*/
+#tabtwo-content, #two .tab {
+  background: #E7843B;
+}
+#tabthree-content, #three .tab {
+  background: #D66037;
+}
+#tabfour-content, #four .tab {
+  background: $rot;
+}
 
 #without-bg.rounded.yellow {
-  margin-top: -30px;
+  margin-top: -2px;
 }
 
 .border-teaser {
   font: italic normal normal 24px/36px Open Sans;
-  margin: 50px auto 100px;
+  margin: 130px auto ;
   text-align: center;
   border: 8px solid #FFB641;
   border-radius: 50px 50px 50px 0;
@@ -656,6 +672,13 @@
     a {
       color: black;
     }
+  }
+}
+
+.contain .image {
+  img {
+    height: 80vh;
+    object-fit: cover;
   }
 }
 

@@ -10,15 +10,15 @@ return array(
         'type' => 'none',
     ),
     'fields' => array(
-        'titel' => array(
+       /* 'titel' => array(
             'label' => array('Überschrift', 'Beschreibung...'),
             'inputType' => 'text',
-        ),
-        'image' => array(
+        ),*/
+       /* 'image' => array(
             'label' => array('Bild', 'Beschreibung...'),
             'eval' => array('filesOnly' => true),
             'inputType' => 'fileTree'
-        ),
+        ),*/
         'feldname' => array(
             'label' => array('HTML Feld'),
             'inputType' => 'textarea',
