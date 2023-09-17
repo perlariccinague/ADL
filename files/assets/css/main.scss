@@ -118,7 +118,7 @@
 
 .rounded, .bg-gray, .bg-white, .bg-lightness,
 .bg-finance, .bg-planning, .bg-yellow-new, .bg-gray-new,
-.bg-company {
+.bg-company, .bg-yellow-left {
   position: relative;
   z-index: 5;
  background: white;
@@ -626,7 +626,7 @@
  }
 }
 
-.bg-gray-new, .bg-company {
+.bg-gray-new, .bg-company, .bg-yellow-left {
   .contain-new {
     background: transparent linear-gradient(221deg, #A3B4B5 0%, #525A5B 100%) 0% 0% no-repeat padding-box;
     border-top-left-radius: 150px ;
@@ -651,7 +651,20 @@
   }
 }
 
-
+.bg-yellow-left {
+  .contain-new {
+    background: transparent linear-gradient(143deg, #FFB641 0%, #E19214 100%) no-repeat;
+    border-top-right-radius: 150px ;
+    .ce_text {
+      h2 {
+        color: $rot;
+      }
+      p {
+        color: black;
+      }
+    }
+  }
+}
 
 .block-teaser {
   margin: 50px auto;
@@ -718,6 +731,15 @@
     color: $rot;
   }
 }
+
+.headline-team {
+  text-align: center;
+  font: normal normal 600 54px/60px Open Sans;
+  color: $rot;
+  text-transform: uppercase;
+}
+
+
 
 
 

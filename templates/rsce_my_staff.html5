@@ -1,0 +1,9 @@
+<div class="item">
+    <img src="{{file::<?= $this->image ?>}}" alt="">
+    <div class="description-overlay">
+        <h3><?= $this->name ?></h3>
+        <div class="item-teaser">
+            <p><?= $this->description ?></p>
+        </div>
+    </div>
+</div>
