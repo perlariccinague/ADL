@@ -18,8 +18,11 @@ return array(
 
         'name' => array(
             'label' => array('Name', 'Beschreibung...'),
-            'inputType' => 'text',
+           /* 'inputType' => 'text',*/
+            'eval' => array('rte' => 'tinyMCE'),
+            'inputType' => 'textarea',
         ),
+
         'description' => array(
             'label' => array('Beschreibung', 'Beschreibung...'),
             'eval' => array('rte' => 'tinyMCE'),

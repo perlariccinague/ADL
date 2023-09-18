@@ -458,11 +458,6 @@
   }
 }
 
-.image-text .text-right p a {
-  &:after {
-    transform: translate(100%, 0%) rotate(-4deg);
-  }
-}
 .image-text #link-color.text-right p a {
  background-color: $lightness;
 }
@@ -554,17 +549,20 @@
   border: 8px solid #FFB641;
   border-radius: 50px 50px 50px 0;
   position: relative;
+  overflow: visible;
   p {
     padding: 15px 45px;
   }
   &:before {
     position: absolute;
     content: "";
-    left: 100px;
-    top: 2px;
-    width: 50px;
-    height: 50px;
-    background: url("/files/assets/layout/before-rot.svg") no-repeat 0/cover;
+    left: 63px;
+    top: -70px;
+    width: 133px;
+    height: 110px;
+    background: #fff url("/files/assets/layout/before-rot.svg") no-repeat center/50%;
+    padding: 29px;
+    box-sizing: border-box;
   }
 }
 
@@ -774,6 +772,54 @@
   border: none;
 }
 
+.teaser-engagement {
+  padding: 80px 0;
+  text-align: center;
+  .image_container {
+    img {
+      width: 600px;
+      margin-bottom: 50px;
+      filter: drop-shadow(12px 0 14px rgba(0, 0, 0, 0.5));
+    }
+  }
+  p {
+    font: normal normal normal 24px/36px Open Sans;
+    a {
+      background-color: $yellow;
+      &:after {
+        background-color: $rot;
+      }
+    }
+  }
+}
+
+.jobs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px auto 100px;
+  .ce_text {
+    width: 30%;
+    p {
+      font: normal normal 600 20px/30px Open Sans;
+      text-transform: uppercase;
+      text-align: center;
+      a {
+        overflow: hidden;
+        position: relative;
+        transition: 0.2s transform ease-in-out;
+        will-change: transform;
+        z-index: 0;
+        background: #FFB641;
+        height: 175px;
+        display: grid;
+        align-items: center;
+        color: white;
+        border-radius: 30px 30px 30px 0;
+      }
+    }
+  }
+}
 
 
 

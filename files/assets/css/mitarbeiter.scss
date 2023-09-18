@@ -1,26 +1,33 @@
 @import "variables";
 
 .board {
-  text-align: center;
+  /*text-align: center;
   display: flex;
+  justify-content: center;*/
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
 .item {
   position: relative;
-  /*height: 471px;*/
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
+  width: 30%;
+  height: 380px;
+  z-index: 30;
   img {
-    /*height: 340px;*/
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 380px;
+    object-fit: cover;
   }
 }
 
 .description-overlay {
-  display: flex;
+/*  display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
@@ -28,16 +35,21 @@
   width: 100%;
   top: 0;
   transition: transform 300ms;
-  transform: translate3d(0, calc(100% - 3.5rem), 0);
+  transform: translate3d(0, calc(100% - 3.5rem), 0);*/
+  display: grid;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  bottom: -86%;
+  transition: transform 300ms;
   h3 {
     margin: 0;
     display: block;
     background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
     padding: 1rem;
     border-top-right-radius: 50px;
-    &:hover ~ .item__overlay {
-      transform: translate3d(0, 0, 0);
-    }
+    cursor: pointer;
   }
   .item-teaser {
     flex-grow: 1;
@@ -45,3 +57,63 @@
     background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
   }
 }
+
+.description-overlay h3:hover ~ .item-teaser {
+  opacity: 1;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+
+.figure {
+  position: relative;
+  transition: height .3s ease-out, bottom .3s ease-out;
+  &:hover figcaption {
+    position: relative;
+    bottom: 61px;
+    width: 100%;
+    height: 100%;
+    font: normal normal normal 20px/30px Open Sans;
+
+  }
+}
+
+figcaption {
+  bottom: 0;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+  height: 23%;
+  background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
+  border-top-right-radius: 50px;
+  cursor: pointer;
+  transition: height .3s ease-out, bottom .3s ease-out;
+  p {
+    font: normal normal 600 24px/28px Open Sans;
+    color: white;
+    text-transform: uppercase;
+    strong {
+      text-transform: lowercase;
+      font-weight: normal;
+    }
+  }
+}
+
+.specialists {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .item {
+    position: relative;
+    width: 32%;
+  /*  height: auto;*/
+    margin: 13px 0;
+    height: 380px;
+    z-index: 30;
+  }
+}
+
