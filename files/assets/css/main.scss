@@ -739,7 +739,40 @@
   text-transform: uppercase;
 }
 
+.location-block {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  .location {
+    width: 30%;
+    border-right: 3px solid #FFB641;
+    margin: 10px auto;
+    padding-right: 20px;
+    h2 {
+      font: normal normal 600 46px/32px Open Sans;
+      text-transform: uppercase;
+      color: $rot;
+    }
+    p {
+      font: normal normal normal 24px/30px Open Sans;
+      a {
+        color: black;
+        transition: color 250ms;
+        &:hover {
+          color: $rot;
+        }
+      }
+    }
+  }
+}
 
+#dresden, #wuerzburg, #zwickau {
+  border: none;
+}
 
 
 

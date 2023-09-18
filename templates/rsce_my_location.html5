@@ -1,0 +1,4 @@
+<div class="location" <?php echo $this->cssID ?>>
+    <h2><?= $this->name ?></h2>
+    <p><?= $this->address ?></p>
+</div>
