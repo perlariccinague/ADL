@@ -109,6 +109,7 @@
     transition: 0.2s color ease-out;
     &:after {
       background-color: $rot;
+      left: -35px;
     }
     &:hover {
       color: white;
@@ -305,66 +306,48 @@
   border-radius: 0 30px 30px 30px;
 }
 
-.benefit-bottom, .benefit-top {
-  .left, .ce_text.box-yellow {
-    p {
-      a {
-        overflow: hidden;
-        padding: 1rem 2rem;
-        position: relative;
-        transition: .2s transform ease-in-out;
+.benefit-top .left, .benefit-bottom .ce_text.box-yellow,
+.jobs .ce_text {
+  p {
+    a {
+      overflow: hidden;
+      padding: 1rem 2rem;
+      position: relative;
+      transition: .3s transform ease-in-out;
+      will-change: transform;
+      z-index: 0;
+      &:after {
+        background-color: $rot;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 500px;
+        width: 500px;
+        position: absolute;
+        left: -85px;
+        top: -225px;
+        transform: scale(0);
+        transform-origin: bottom left;
+        transition: .3s transform ease-out;
         will-change: transform;
-        z-index: 0;
-        &:after {
-          background-color: $rot;
-          border-radius: 3rem;
-          content: '';
-          display: block;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform: translate(-100%, 0) rotate(0);
-          transform-origin: top left;
-          transition: .2s transform ease-out;
-          will-change: transform;
-          z-index: -1;
-        }
+        z-index: -1;
       }
-    }
-  }
-}
-
-.benefit-top .left {
-  p a {
-   &:after {
-     transform: translate(0, 100%) rotate(0);
-     border-radius: 30px 30px 30px 0;
-   }
-    &:hover:after {
-      transform: translate(0, 0);
+      &:hover:after {
+        transform: scale(1);
+      }
     }
   }
 }
 
 .benefit-bottom #left-box.ce_text.box-yellow p a {
   &:after {
-    border-radius: 30px 0 30px 30px;
-    transform: translate(0, -100%) rotate(0);
-  }
-  &:hover:after {
-    transform: translate(0, 0);
+    transform-origin: top right;
   }
 }
 
 .benefit-bottom #right-box.ce_text.box-yellow p a {
   &:after {
-    border-radius: 0 30px 30px 30px;
-    transform: translate(0, -100%) rotate(0);
-  }
-  &:hover:after {
-    transform: translate(0, 0);
+    transform-origin: top left;
   }
 }
 
@@ -805,21 +788,33 @@
       text-transform: uppercase;
       text-align: center;
       a {
-        overflow: hidden;
-        position: relative;
-        transition: 0.2s transform ease-in-out;
-        will-change: transform;
-        z-index: 0;
         background: #FFB641;
         height: 175px;
         display: grid;
         align-items: center;
         color: white;
         border-radius: 30px 30px 30px 0;
+        padding: 0;
+        &:after {
+          content: "jetzt bewerben";
+          z-index: 100;
+          align-items: center;
+          display: grid;
+          margin-top: 60px;
+        }
       }
     }
   }
 }
+
+.partner {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto 50px;
+  max-width: 800px;
+}
+
 
 
 

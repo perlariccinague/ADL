@@ -1,0 +1,122 @@
+@import "variables";
+
+.mobile_menu {
+  z-index: 205;
+  .inner {
+    background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
+  }
+}
+.inner .header {
+  .header-right {
+    display: flex;
+    align-items: center;
+    .menu-close {
+      top: 32px;
+      position: relative;
+      img {
+        width: 80px;
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+.navigation {
+  width: 90%;
+  max-width: 800px;
+  margin: 100px auto;
+  .mod_navigation {
+    overflow: visible;
+    ul {
+      max-width: 300px;
+      li {
+        padding: 20px 8px;
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+        /*overflow: hidden;*/
+        a {
+          color: white;
+          text-transform: uppercase;
+          font: normal normal 600 20px/28px Open Sans;
+        }
+        &:before {
+          background-color: $yellow;
+          content: "";
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          /* transform: translate(0, 100%);*/
+          transform: scaleY(0);
+          transform-origin: bottom right;
+          transition: 0.3s transform linear;
+          z-index: -1;
+        }
+        &:hover:before {
+          /* transform: translate(0, 0);*/
+          transform: scaleY(1);
+          transform-origin: bottom left;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid white;
+        }
+        strong.active {
+          color: white;
+          font: normal normal 600 20px/28px Open Sans;
+          text-transform: uppercase;
+        }
+      }
+      &.level_2 {
+        display: none;
+        position: inherit;
+        li {
+          border: none;
+          font: normal normal normal 18px/32px Open Sans;
+          padding: 10px 0 10px 130px ;
+          width: 100%;
+          overflow: visible;
+          a {
+            text-transform: capitalize;
+            position: relative;
+            transition: color 250ms;
+            &:before {
+              position: absolute;
+              content: "";
+              left: -30px;
+              top: 2px;
+              width: 20px;
+              height: 20px;
+              background: url("/files/assets/layout/before.svg") no-repeat 0/cover;
+            }
+            &:hover {
+              color: $yellow;
+            }
+          }
+          &:before {
+            display: none;
+          }
+          &:hover:before{
+            transform: none ;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.navigation .mod_navigation ul li:hover ul.level_2,
+.navigation .mod_navigation ul li:focus ul.level_2{
+  position: absolute;
+  display: block;
+  width: 100%;
+  z-index: 100;
+  left: 50%;
+  overflow: visible;
+  transform: translateX(50%);
+  top: 9px;
+}
+
