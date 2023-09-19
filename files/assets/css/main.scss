@@ -901,6 +901,51 @@
   max-width: 800px;
 }
 
+@media screen and (max-width: 1000px) {
+  .tabs {
+    position: relative;
+    width: 100%;
+    label {
+      img {
+        display: none;
+      }
+    }
+    .tab {
+      width: 100%;
+      transform: none;
+      margin-bottom: 30px;
+    }
+  }
+
+  #one,#two,#three,#four {
+    left: 0;
+    label {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      cursor: initial;
+      &:hover {
+        color: white;
+      }
+      &:after {
+        content: none;
+      }
+    }
+    .tab {
+      left: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .tab-block {
+    height: auto;
+  }
+
+  .tabs input[type="radio"]:checked + label ~ .tab {
+    transform: none;
+  }
+}
+
 
 
 
