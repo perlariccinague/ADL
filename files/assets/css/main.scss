@@ -17,7 +17,7 @@
   position: fixed;
   top: 50%;
   width: 70px;
-  z-index: 200;
+  z-index: 300;
   transform: translateY(-50%);
   right: 0;
   & > div {
@@ -458,41 +458,126 @@
 }
 
 .tab-block {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 500px;
   margin: 0 auto 100px;
 }
 
 .tabs {
-  display: flex;
-  flex-wrap: wrap;
+  position: absolute;
+  width: 24.5%;
+  top: 0;
+  left: 0;
 }
+
+#one {
+  label {
+    border-top-left-radius: 50px;
+    &:after {
+      background: url("../layout/yellow-arrow-right-border-big.svg") no-repeat 0/contain;
+    }
+  }
+  .tab {
+    border-bottom-left-radius: 50px;
+    transform-origin: top left;
+  }
+}
+
+#two {
+  left: 25%;
+  label {
+    &:after {
+      background: url("../layout/orange-arrow-right.svg") no-repeat 0/contain;
+    }
+  }
+  .tab {
+    left: -102%;
+    border-bottom-left-radius: 50px;
+  }
+}
+
+#three {
+  left: 50%;
+  label {
+    &:after {
+      background: url("../layout/dark-orange-arrow-right.svg") no-repeat 0/contain;
+    }
+  }
+  .tab {
+    left: -102%;
+    border-bottom-right-radius: 50px;
+  }
+}
+
+#four {
+  left: 75%;
+  .tab {
+    left: -204%;
+    border-bottom-right-radius: 50px;
+    transform-origin: top right;
+  }
+  label {
+    border-top-right-radius: 50px;
+  }
+}
+
 .tabs label {
-  order: 1;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  height: 250px;
+  width: 100%;
   padding: 1rem 2rem;
+  order: 1;
   cursor: pointer;
   font-weight: bold;
-  transition: background ease 0.2s;
+  transition: background ease 0.2s, color 250ms;
   background: #90CAF9;
-  margin-right: 0.2rem;
+  box-sizing: border-box;
   text-align: center;
   color: white;
   span {
     text-transform: uppercase;
     display: block;
+    width: 100%;
+    margin-bottom: 15px;
     font: normal normal 600 24px/36px Open Sans;
+  }
+  img {
+    width: 40px;
+    transition: filter 250ms;
+  }
+  &:hover {
+    color: black;
+    img {
+      filter: invert(1);
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 80px;
+    z-index: 100;
   }
 }
 .tabs .tab  {
-  order: 9;
-  flex-grow: 1;
-  width: 100%;
-  display: none;
-  padding: 20px;
+  position: relative;
+  top: 5px;
+  width: 304%;
+  padding: 20px 50px;
   background: $yellow;
   font: normal normal normal 24px/36px Open Sans;
   color: white;
+  transform: scale(0);
+  transition: transform 500ms ease-out, height 500ms ease-out;
+  transform-origin: center top;
+  box-sizing: border-box;
 }
 .tabs input[type="radio"] {
   display: none;
@@ -505,7 +590,8 @@
   }
 }
 .tabs input[type="radio"]:checked + label ~ .tab  {
-  display: inline-flex;
+  transform: scale(1);
+  transform-origin: center top;
 }
 
 #tabone-content, #one .tab  {

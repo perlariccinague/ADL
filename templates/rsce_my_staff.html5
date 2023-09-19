@@ -10,7 +10,7 @@
 -->
 
 
-<div class="item">
+<div class="staff-item">
     <div class="figure">
         <img src="{{file::<?= $this->image ?>}}" alt="">
         <figcaption>

@@ -1,5 +1,9 @@
 @import "variables";
 
+.mod_article.team-boxes {
+  overflow: visible;
+}
+
 .board {
   /*text-align: center;
   display: flex;
@@ -13,16 +17,58 @@
   gap: 1rem;
 }
 
-.item {
+.staff-item {
   position: relative;
   /*overflow-y: hidden;*/
   width: 30%;
   height: 380px;
   z-index: 30;
-  img {
-    width: 100%;
+  transition: z-index 1s;
+  .figure {
+    position: relative;
+    transition: height .3s ease-out;
     height: 380px;
-    object-fit: cover;
+    img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+    figcaption {
+      top: 293px;
+      box-sizing: border-box;
+      position: absolute;
+      width: 100%;
+      padding: 0 1rem;
+      overflow: hidden;
+      height: 23%;
+      background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
+      border-top-right-radius: 50px;
+      transition: height .3s ease-out;
+      p {
+        color: white;
+        font-size: 17px;
+        line-height: 1.8em;
+        &:first-child {
+          font-size: 20px;
+          text-transform: uppercase;
+          line-height: 1.5em;
+        }
+        strong {
+          text-transform: capitalize;
+          font-weight: normal;
+        }
+      }
+    }
+    &:hover {
+      height: 690px;
+      figcaption {
+        height: 100%;
+      }
+    }
+  }
+  &:hover {
+    z-index: 100;
+    transition: z-index 0s;
   }
 }
 
@@ -64,42 +110,6 @@
   transform: translate3d(0, 0, 0);
 }
 
-.figure {
-  position: relative;
-  transition: height .3s ease-out, bottom .3s ease-out;
-  &:hover figcaption {
-    position: relative;
-    bottom: 61px;
-    width: 100%;
-    height: 100%;
-    font: normal normal normal 20px/30px Open Sans;
-
-  }
-}
-
-figcaption {
-  bottom: 0;
-  box-sizing: border-box;
-  position: absolute;
-  width: 100%;
-  padding: 0 1rem;
-  overflow: hidden;
-  height: 23%;
-  background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
-  border-top-right-radius: 50px;
-  cursor: pointer;
-  transition: height .3s ease-out, bottom .3s ease-out;
-  p {
-    font: normal normal 600 24px/28px Open Sans;
-    color: white;
-    text-transform: uppercase;
-    strong {
-      text-transform: lowercase;
-      font-weight: normal;
-    }
-  }
-}
-
 .specialists {
   width: 90%;
   max-width: 1100px;
@@ -107,13 +117,11 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  .item {
+  .staff-item {
     position: relative;
     width: 32%;
   /*  height: auto;*/
     margin: 13px 0;
-    height: 380px;
-    z-index: 30;
   }
 }
 
