@@ -25,14 +25,15 @@
           padding: 10px 0;
           text-transform: uppercase;
           font: normal normal normal 18px/32px Open Sans;
-          a {
+          margin: 0 30px;
+          a, strong {
             color: white;
             position: relative;
-            padding-left: 30px;
+          /*  padding-left: 30px;*/
             &:before {
               position: absolute;
               content: "";
-              left: 0;
+              left: -30px;
               top: 2px;
               width: 20px;
               height: 20px;
@@ -105,6 +106,88 @@
           a {
             color: white;
             font: normal normal normal 18px/34px Open Sans;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #footer .inside {
+    border-top-right-radius: 75px;
+    .bg-footer {
+      background-size: 300px;
+
+    }
+  }
+  .footer-logo {
+    width: 85%;
+  }
+  .footer-top .footer-middle {
+    padding: 30px 0;
+    .mod_customnav, .footer-right {
+      width: 100%;
+    }
+    .footer-right {
+      font: normal normal normal 17px/24px Open Sans;
+      margin: 20px auto;
+      .ce_text {
+        text-align: center;
+      }
+      .footer-social-icons {
+        justify-content: center;
+        margin: 15px auto;
+        .icon {
+          width: 50px;
+          padding: 0 5px;
+        }
+      }
+    }
+    .mod_customnav ul {
+      li {
+        font: normal normal normal 16px/20px Open Sans;
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    .nav-bottom {
+      padding: 20px 0;
+      .mod_customnav  {
+        ul {
+          width: 90%;
+          margin: 0 auto;
+          max-width: 1130px;
+          text-align: center;
+          display: block;
+          li {
+            padding-right: 0;
+            margin: 10px auto;
+            &:not(:last-child) {
+              border-right: none;
+            }
+            a {
+              position: relative;
+              &:after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                width: 23px;
+                height: 2px;
+                background-color: #fff;
+                transition: width 250ms;
+                text-align: center;
+                transform: translateX(-50%);
+              }
+              &.last {
+                &:after {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }

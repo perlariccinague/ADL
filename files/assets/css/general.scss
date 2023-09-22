@@ -25,17 +25,18 @@ ul, li {
   margin: 0 auto;
 }
 
-.header-left, .footer-logo {
+.footer-logo {
   width: 48%;
-  .logo-header {
-    a {
-      background: white;
-      padding: 50px 35px;
-      border-bottom-right-radius: 30px;
-      display: flex;
-      img {
-        width: 460px;
-      }
+}
+
+.logo-header {
+  a {
+    background: white;
+    padding: 50px 35px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    img {
+      width: 460px;
     }
   }
 }
@@ -120,6 +121,20 @@ ul, li {
   }
 }
 
+@media screen and (max-width: 840px) {
+  p {
+    font: normal normal normal 19px/28px Open Sans;
+  }
+  .teaser, .image-text .text-right, .text-image .text-left,
+  .bg-gray .contain .ce_text, #engagement, .teaser-engagement{
+    p, .more{
+   /*   font: normal normal 600 22px/50px Open Sans;*/
+      a {
+        padding: 6px 25px;
+      }
+    }
+  }
+}
 
 
 

@@ -120,3 +120,16 @@
   top: 9px;
 }
 
+.mod_mobile_menu.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  .mod_mobile_menu.desktop {
+    display: none;
+  }
+  .mod_mobile_menu.mobile {
+    display: block;
+  }
+}
+

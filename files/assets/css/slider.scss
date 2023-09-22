@@ -4,27 +4,32 @@
   position: relative;
   margin-top: 50px;
   .slider-wrapper {
-    img {
-      height: 75vh;
-      width: 100%;
-      object-fit: cover;
-    }
-    .caption {
-      position: absolute;
-      bottom: 17%;
-      text-align: center;
-      left: 50%;
-      color: white;
-      text-transform: uppercase;
-      font: normal normal bold 24px/30px Open Sans;
-      text-shadow: 0 0 15px #00000080;
-      border-bottom: 2px solid white;
-      width: 165px;
-      padding-bottom: 6px;
-      transform: translateX(-50%);
+    .image_container {
+      margin-bottom: -10px;
+      img {
+        height: 75vh;
+        width: 100%;
+        object-fit: cover;
+      }
+      .caption {
+        position: absolute;
+        bottom: 17%;
+        text-align: center;
+        left: 50%;
+        color: white;
+        text-transform: uppercase;
+        font: normal normal bold 24px/30px Open Sans;
+        text-shadow: 0 0 15px #00000080;
+        border-bottom: 2px solid white;
+        width: 165px;
+        padding-bottom: 6px;
+        transform: translateX(-50%);
+      }
     }
   }
 }
+
+
 
 .ce_sliderStart.galery {
   .slider-control {

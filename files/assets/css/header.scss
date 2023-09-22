@@ -15,6 +15,7 @@
   justify-content: space-between;
   z-index: 2;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .header-right {
@@ -70,6 +71,31 @@
 }
 
 @media screen and (max-width: 840px) {
+  .header {
+    display: block;
+    .header-left {
+      .logo-header a {
+        padding: 35px 25px;
+      }
+    }
+    .header-right {
+      text-align: center;
+      display: block;
+      .mod_mobile_menu.mobile {
+        .menu {
+          display: inline-block;
+          padding: 6px 10px;
+          img {
+            width: 60px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 
+  .mod_breadcrumb {
+    display: none;
+  }
 }
 
