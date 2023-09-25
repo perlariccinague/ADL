@@ -696,10 +696,15 @@
    img {
      width: 100%;
    }
-   .image img {
-     border-top-right-radius: 150px;
-     height: 80vh;
-     object-fit: cover;
+   .image {
+     .image_container {
+       margin-bottom: -6px;
+       img {
+         border-top-right-radius: 150px;
+         height: 80vh;
+         object-fit: cover;
+       }
+     }
    }
  }
 }
@@ -780,8 +785,8 @@
   background: url("/files/assets/layout/5.svg") no-repeat /*0/cover*/;
 }
 
-.block-teaser #top-before.three:before,
-.block-teaser #top-before.four:before{
+.block-teaser .top-before.three:before,
+.block-teaser .top-before.four:before{
   top: 5px;
 }
 
@@ -796,7 +801,7 @@
   }
 }
 
-#offers.teaser-left {
+.offers.teaser-left {
   padding: 80px 0;
   margin-bottom: 0;
 }
@@ -910,6 +915,9 @@
   width: 90%;
   margin: 0 auto 50px;
   max-width: 800px;
+  .contact-box {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -947,13 +955,33 @@
       border-bottom-right-radius: 0;
     }
   }
-
   .tab-block {
     height: auto;
   }
-
   .tabs input[type="radio"]:checked + label ~ .tab {
     transform: none;
+  }
+}
+
+.privacy {
+  margin: 30px auto;
+  padding: 50px 0 0;
+  h2 {
+    font: normal normal 600 54px/60px Open Sans;
+    letter-spacing: 0;
+    color: $rot;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  p {
+    font: normal normal normal 18px/26px Open Sans;
+    a {
+      color: $brown;
+      transition: color 250ms;
+      &:hover{
+        color: $yellow;
+      }
+    }
   }
 }
 
@@ -1008,6 +1036,7 @@
     margin: 30px auto;
     .ce_text {
       width: 100%;
+      height: 300px;
       p {
         font: normal normal normal 19px/28px Open Sans;
         strong {
@@ -1021,8 +1050,13 @@
     }
   }
 
+  .bg-gray .contain, .bg-yellow-new .contain-new,
+  .teaser-bg-gray, .bg-gray-new .contain-new,
+  .bg-yellow-left .contain-new {
+    border-top-left-radius: 70px;
+  }
+
   .bg-gray .contain {
-    border-top-left-radius: 50px;
     .ce_text {
       padding: 30px 0;
       margin-bottom: 0;
@@ -1046,7 +1080,6 @@
     padding-bottom: 40px;
   }
   .benefit-top .ce_text, .benefit-bottom .ce_text.box-yellow {
-    width: 100%;
     h2 {
       text-align: center;
       font: normal normal bold 48px/52px Open Sans;
@@ -1099,7 +1132,7 @@
   }
 
   .bg-yellow {
-    border-top-right-radius: 75px;
+    border-top-right-radius: 70px;
   }
 
   .contain .ce_text {
@@ -1124,7 +1157,123 @@
   .contact-box  {
     width: 100%;
   }
+
+  .block-teaser {
+    margin: 0 auto;
+    padding: 20px 0;
+    p {
+      font: normal normal normal 19px/28px Open Sans;
+    }
+    .one, .two, .three, .four, .five {
+      padding: 10px 0;
+      p {
+        padding-left: 50px;
+      }
+      &:before {
+        left: 7px;
+        top: 32px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .block-teaser .one::before, .block-teaser .two::before ,
+  .block-teaser .three::before, .block-teaser .four::before,
+  .block-teaser .five::before {
+    background-size: 30px;
+  }
+  .bg-yellow-new .contain-new img,
+  .bg-yellow-new .contain-new .image .image_container img {
+    height: 75vh;
+    object-fit: cover;
+    border-top-right-radius: 70px;
+  }
+
+  .partner {
+    flex-wrap: wrap;
+    .contact {
+      width: 100%;
+    }
+  }
+  .block-teaser .top-before.three:before,
+  .block-teaser .top-before.four:before{
+    top: 32px;
+  }
+
+  .offers.teaser-left {
+    padding: 30px 0;
+  }
+  .bg-gray-new .contain-new, .bg-yellow-left .contain-new  {
+    .ce_text {
+      h2 {
+        font: normal normal 600 30px/36px Open Sans;
+        word-break: break-all;
+      }
+      p {
+        font: normal normal normal 19px/28px Open Sans;
+      }
+    }
+    img {
+      border-top-right-radius: 70px;
+    }
+  }
+
+  #acquisition.teaser-left {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    h2 {
+      font: normal normal 600 30px/36px Open Sans;
+    }
+  }
+
+  .bg-yellow-left .contain-new {
+    border-top-right-radius: 70px;
+  }
+
+  .headline-team {
+    font: normal normal 600 30px/36px Open Sans;
+  }
+
+  .location-block .location {
+    width: 100%;
+    border: none;
+    padding-right: 0;
+    h2 {
+      font: normal normal 600 30px/34px Open Sans;
+    }
+    p {
+      font: normal normal normal 19px/28px Open Sans;
+    }
+  }
+
+  .teaser-engagement {
+    padding: 20px 0;
+    .image_container {
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      font: normal normal normal 19px/28px Open Sans;
+    }
+  }
+
+  .jobs {
+    margin: 30px auto 50px;
+    .ce_text {
+      width: 100%;
+      p a {
+        height: 130px;
+      }
+    }
+  }
 }
+
+
+
+
+
 
 
 

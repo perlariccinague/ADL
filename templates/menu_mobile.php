@@ -8,11 +8,11 @@
     </div>
 </div>
 
-<div class="navigation">
+<!--<div class="navigation">
     {{insert_module::18}}
-</div>
+</div>-->
 
-<!--<nav class="mod_navigation-mobile">
+<nav class="mod_navigation-mobile">
     <ul class="menu-list">
         <li>
             <div>Vermögensverwaltung und Anlageberatung</div>
@@ -37,4 +37,4 @@
     </ul>
 
 </nav>
--->
+

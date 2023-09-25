@@ -1,6 +1,6 @@
 @import "variables";
 
-.mobile_menu {
+#mobile-menu-1.mobile_menu {
   z-index: 205;
   .inner {
     background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
@@ -78,7 +78,7 @@
           padding: 10px 0 10px 130px ;
           width: 100%;
           overflow: visible;
-          a {
+          a, strong {
             text-transform: capitalize;
             position: relative;
             transition: color 250ms;
@@ -120,16 +120,90 @@
   top: 9px;
 }
 
-.mod_mobile_menu.mobile {
+.mod_mobile_menu.mobile, .mod_navigation-mobile {
   display: none;
 }
 
+#mobile-menu-20.mobile_menu {
+  display: none !important;
+}
+
 @media screen and (max-width: 840px) {
-  .mod_mobile_menu.desktop {
+  .mod_mobile_menu.desktop, .navigation {
     display: none;
   }
-  .mod_mobile_menu.mobile {
+  .mod_mobile_menu.mobile, .mod_navigation-mobile {
     display: block;
+  }
+  #mobile-menu-1.mobile_menu {
+    display: none !important;
+  }
+  #mobile-menu-20.mobile_menu {
+    display: block !important;
+  }
+
+  #mobile-menu-20.mobile_menu {
+    z-index: 205;
+    .inner {
+      background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
+      width: 90%;
+      margin: 0 auto;
+      .header {
+        width: 100%;
+      }
+    }
+  }
+  #mobile-menu-20.mobile_menu .header .header-right {
+    display: block;
+    .menu-close {
+      top: 0;
+      img {
+        width: 60px;
+      }
+    }
+  }
+  .mod_navigation-mobile {
+    width: 90%;
+    margin: 15px auto;
+    max-width: $max-width;
+    .menu-list {
+      & > li {
+        padding: 7px 0;
+        border-bottom: 2px solid white;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+        & > div {
+          font: normal normal normal 17px/22px Open Sans;
+          color: white;
+          text-transform: uppercase;
+        }
+        .mod_customnav {
+         /* margin: 10px 30px;*/
+          li {
+            font: normal normal normal 16px/29px Open Sans;
+            padding: 5px 0;
+            margin: 0 25px;
+            a, strong {
+              position: relative;
+              color: white;
+              &:before {
+                position: absolute;
+                content: "";
+                left: -25px;
+                top: 0;
+                width: 28px;
+                height: 28px;
+                background: url("/files/assets/layout/before.svg") no-repeat;
+                background-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mod_navigation-mobile .menu-list > li.last {
+    border: none;
   }
 }
 
