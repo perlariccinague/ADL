@@ -29,7 +29,6 @@
           a, strong {
             color: white;
             position: relative;
-          /*  padding-left: 30px;*/
             &:before {
               position: absolute;
               content: "";
@@ -42,6 +41,9 @@
           }
           &:not(:last-child) {
             border-bottom: 1px solid white;
+          }
+          strong {
+            color: $yellow;
           }
         }
       }
@@ -102,11 +104,15 @@
           &:not(:last-child) {
             border-right: 2px solid white;
           }
-          a {
+          a, strong {
             color: white;
             font: normal normal normal 18px/34px Open Sans;
           }
+          strong {
+            color: $yellow;
+          }
         }
+
       }
     }
   }

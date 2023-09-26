@@ -71,26 +71,31 @@
   position: absolute;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
+  /*transform: translate(-50%, -50%);
   z-index: 200;
-  height: 85vh;
+  z-index: 6;*/
+  transform: translate(-50%, -100%);
+  z-index: 7;
+  height: 45vh;
+/*  height: 85vh;*/
   .teaser {
     position: absolute;
     left: 50%;
-    width: 100%;
+    width: 90%;
     max-width: $max-width;
     transform: translateX(-50%);
-    z-index: 200;
     height: 85vh;
     color: white;
   }
 }
 
+
 .teaser {
   h2 {
     font: normal normal 600 70px/80px Open Sans;
     text-transform: uppercase;
-    text-shadow: 3px 2px 20px #0000007A;
+   /* text-shadow: 3px 2px 20px #0000007A;*/
+    text-shadow: 2px 2px 11px #000000BD;
   }
   p {
     font: normal normal 600 30px/50px Open Sans;
@@ -920,6 +925,38 @@
   }
 }
 
+.privacy {
+  margin: 30px auto;
+  padding: 50px 0 ;
+  h2 {
+    font: normal normal 600 54px/60px Open Sans;
+    letter-spacing: 0;
+    color: $rot;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  p {
+    font: normal normal normal 18px/26px Open Sans;
+    a {
+      color: $brown;
+      transition: color 250ms;
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.text.privacy {
+  padding: 50px 0 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .header-teaser {
+    height: 50vh;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .tabs {
     position: relative;
@@ -961,27 +998,8 @@
   .tabs input[type="radio"]:checked + label ~ .tab {
     transform: none;
   }
-}
-
-.privacy {
-  margin: 30px auto;
-  padding: 50px 0 0;
-  h2 {
-    font: normal normal 600 54px/60px Open Sans;
-    letter-spacing: 0;
-    color: $rot;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  p {
-    font: normal normal normal 18px/26px Open Sans;
-    a {
-      color: $brown;
-      transition: color 250ms;
-      &:hover{
-        color: $yellow;
-      }
-    }
+  .header-teaser {
+    height: 60vh;
   }
 }
 
@@ -1002,6 +1020,8 @@
     }
   }
   .header-teaser {
+    transform: translate(-50%, -50%);
+    height: 85vh;
     .teaser {
       h2 {
         font: normal normal 600 30px/36px Open Sans;
@@ -1267,6 +1287,10 @@
         height: 130px;
       }
     }
+  }
+
+  .benefit-top .ce_text, .benefit-bottom .ce_text.box-yellow {
+    width: 100%;
   }
 }
 

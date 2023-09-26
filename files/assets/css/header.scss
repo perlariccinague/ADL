@@ -3,8 +3,9 @@
 #header {
   position: absolute;
   width: 100%;
-  z-index: 200;
+/*  z-index: 200;*/
   height: 85vh;
+  z-index: 7;
   .inside {
     height: 100%;
   }
@@ -35,11 +36,15 @@
 .mod_breadcrumb {
   position: absolute;
   bottom: -70px;
-  z-index: 8;
+ /* z-index: 8;*/
   width: 80%;
   background: transparent linear-gradient(98deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
   border-bottom-right-radius: 70px;
   padding: 20px 0;
+  /*height: 85vh;
+  top: 50%;
+  transform: translateY(84%);*/
+  z-index: 7;
   ul {
     max-width: 860px;
     margin: 0 auto;
@@ -60,6 +65,7 @@
       }
       a {
         color: $yellow;
+        font-size: 20px;
       }
     }
   }
