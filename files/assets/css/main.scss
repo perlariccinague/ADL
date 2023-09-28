@@ -936,7 +936,7 @@
     text-align: center;
   }
   p {
-    font: normal normal normal 18px/26px Open Sans;
+    font: normal normal normal 24px/36px Open Sans;
     a {
       color: $brown;
       transition: color 250ms;
@@ -951,11 +951,13 @@
   padding: 50px 0 0;
 }
 
+/*
 @media screen and (max-width: 1300px) {
   .header-teaser {
-    height: 50vh;
+    height: 60vh;
   }
 }
+*/
 
 @media screen and (max-width: 1000px) {
   .tabs {
@@ -1001,6 +1003,9 @@
   .header-teaser {
     height: 60vh;
   }
+  .bg-rot {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -1016,7 +1021,7 @@
   .banner-image {
     position: relative;
     .header-image img {
-      /*height: 100vh;*/
+      height: 85vh;
     }
   }
   .header-teaser {
@@ -1293,6 +1298,17 @@
     width: 100%;
   }
 }
+@media screen and (max-height: 1000px) {
+  .banner-image .header-image img {
+   /* height: 100vh;*/
+  }
+  .teaser {
+    h2 {
+      font: normal normal 600 45px/48px Open Sans;
+    }
+  }
+}
+
 
 
 

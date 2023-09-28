@@ -137,9 +137,9 @@
   display: none !important;
 }
 
-/*.mobile_menu_active body {
+.mobile_menu_active body {
   overflow-y: hidden;
-}*/
+}
 
 .mobile_menu.active.position_top {
   box-shadow: none;
@@ -156,7 +156,7 @@
       background: transparent linear-gradient(116deg, #6E161D 0%, #63141A 100%) no-repeat;
       height: 139px;
       width: 147px;
-      right: 200px;
+      right: 10vw;
       background-size: 150px;
       bottom: -93px;
       box-sizing: border-box;
