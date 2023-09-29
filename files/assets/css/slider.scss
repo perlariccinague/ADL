@@ -7,13 +7,13 @@
     .image_container {
       margin-bottom: -10px;
       img {
-        height: 75vh;
+        height: 85vh;
         width: 100%;
         object-fit: cover;
       }
       .caption {
         position: absolute;
-        bottom: 17%;
+        bottom: 33%;
         text-align: center;
         left: 50%;
         color: white;
@@ -35,7 +35,7 @@
   .slider-control {
     position: absolute;
     width: 50%;
-    bottom: 9%;
+    bottom: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     .slider-menu {
@@ -286,11 +286,11 @@
   }
 }
 
-@media screen and (max-width: 840px)  {
+@media screen and (max-width: 860px)  {
   .ce_sliderStart.galery {
     .slider-wrapper {
       .image_container .caption {
-        bottom: 25%;
+        bottom: 35%;
       }
     }
     .slider-control {

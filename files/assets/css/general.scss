@@ -130,6 +130,7 @@ ul, li {
 .error-image {
   img {
     height: 100vh;
+    width: 100%;
   }
 }
 
@@ -173,7 +174,7 @@ ul, li {
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 860px) {
   p {
     font: normal normal normal 19px/28px Open Sans;
   }

@@ -43,7 +43,7 @@
       transition: height .3s ease-out;
       p {
         color: white;
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.8em;
         &:first-child {
           font-size: 20px;
@@ -71,6 +71,10 @@
 
 .board .staff-item .figure:hover figcaption {
   height: 100vh;
+}
+.board .staff-item .figure figcaption p {
+  font-size: 16px;
+  line-height: 1.6em;
 }
 
 .description-overlay {
@@ -117,7 +121,7 @@
   }
 }
 
-@media screen and (max-width: 840px)  {
+@media screen and (max-width: 860px)  {
   .staff-item, .specialists .staff-item {
     width: 100%;
   }

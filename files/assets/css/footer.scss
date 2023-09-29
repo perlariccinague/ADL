@@ -1,7 +1,10 @@
 @import "variables";
 
 #footer {
-  background: white;
+  clear: none;
+  margin-top: -130px;
+  position: relative;
+  z-index: 6;
   .inside {
     background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
     border-top-right-radius: 150px;
@@ -118,7 +121,7 @@
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 860px) {
   #footer .inside {
     border-top-right-radius: 75px;
     .bg-footer {
