@@ -1,10 +1,6 @@
 @import "variables";
 
 #footer {
-  clear: none;
-  margin-top: -130px;
-  position: relative;
-  z-index: 6;
   .inside {
     background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
     border-top-right-radius: 150px;
@@ -14,10 +10,22 @@
   }
 }
 
+.clear-footer #footer {
+  clear: none;
+  margin-top: -130px;
+  position: relative;
+  z-index: 6;
+}
+
+.clear-footer #footer .footer-logo {
+  top: -130px;
+  position: relative;
+}
+
 .footer-top {
   color: white;
   .footer-middle {
-    padding: 100px 0;
+    padding: 100px 0 ;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -199,6 +207,12 @@
           }
         }
       }
+    }
+  }
+ .clear-footer #footer {
+    margin-top: -70px;
+    .footer-logo {
+      top: 0;
     }
   }
 }

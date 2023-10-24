@@ -148,6 +148,7 @@
 }
 .bg-finance {
   background: #FFB641 no-repeat;
+  padding-bottom: 80px;
 }
 
 .bg-rot {
@@ -262,7 +263,7 @@
   width: 90%;
   max-width: 800px;
   margin: 50px auto;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 .benefit-top, .benefit-bottom {
@@ -677,6 +678,10 @@
     }
     a {
       color: black;
+      transition: color250ms;
+      &:hover {
+        color: $yellow;
+      }
     }
   }
 }
@@ -918,7 +923,7 @@
   display: flex;
   justify-content: center;
   width: 90%;
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
   max-width: 800px;
   .contact-box {
     width: 100%;
@@ -1176,7 +1181,7 @@
    }
   }
   .contact {
-    margin: 35px auto 100px;
+    margin: 35px auto;
   }
   .contact-box  {
     width: 100%;
