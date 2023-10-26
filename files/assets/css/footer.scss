@@ -1,14 +1,21 @@
 @import "variables";
 
 #footer {
+  background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
+  border-top-right-radius: 150px;
   .inside {
-    background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
-    border-top-right-radius: 150px;
+ /*   !*background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;*!
+    background: url("/files/assets/layout/Footer_ADL.webp") no-repeat;
+!*    border-top-right-radius: 150px;*!
+    width: 100%;
+    background-size: 100%;*/
+    clear: both;
     .bg-footer {
       background: url("/files/assets/layout/stier und bär.svg") no-repeat right bottom;
     }
   }
 }
+
 
 .clear-footer #footer {
   clear: none;
@@ -130,11 +137,15 @@
 }
 
 @media screen and (max-width: 860px) {
-  #footer .inside {
-    border-top-right-radius: 75px;
-    .bg-footer {
-      background-size: 300px;
-
+  #footer {
+    background: none;
+    border: 0;
+    .inside {
+      border-top-right-radius: 75px;
+      background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
+      .bg-footer {
+        background-size: 300px;
+      }
     }
   }
   .footer-logo {

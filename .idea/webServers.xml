@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="c775c95f-218f-4685-af24-3164a941a604" name="server" url="http://ftp.data-al-dente.de">
-        <fileTransfer rootFolder="/adlatus1/contao413" host="ftp.data-al-dente.de" port="21">
+      <webServer id="c775c95f-218f-4685-af24-3164a941a604" name="server" url="http://ssh.strato.de">
+        <fileTransfer rootFolder="/contaotest" accessType="SFTP" host="ssh.strato.de" port="22" sshConfigId="7864b527-39df-4595-8f84-9cd15d162c2e" sshConfig="sftp_kk@adlatusag.de@ssh.strato.de:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

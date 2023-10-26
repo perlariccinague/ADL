@@ -361,13 +361,13 @@
 .image-text, .text-image {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 80%;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .image-left, .image-right {
-  width: 35vw;
+  width: 35%;
   img {
     height: 900px;
     object-fit: cover;
@@ -375,15 +375,18 @@
 }
 
 .text-left, .text-right {
-  width: 40vw;
+  width: 64%;
 }
 
 .text-right {
   text-align: right;
-  margin-right: 24%;
+  /*margin-right: 24%;*/
 }
 .text-left {
-  margin-left: 24%;
+ /* margin-left: 24%;*/
+}
+.text-image {
+  float: right;
 }
 
 .image-text .image-left {
@@ -405,7 +408,7 @@
 }
 .image-text #rounded-left.image-left {
   .image_container {
-    margin-bottom: -10px;
+   /* margin-bottom: -10px;*/
     img {
       border-radius: 130px 0;
     }
@@ -930,6 +933,10 @@
   }
 }
 
+.three-block {
+  max-width: 1130px;
+}
+
 .privacy {
   margin: 30px auto;
   padding: 50px 0 120px; ;
@@ -956,10 +963,51 @@
   padding: 50px 0 0;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1920px) {
+  .rounded {
+    background-size: 250px;
+  }
+}
 
+@media screen and (max-width: 1400px) {
+  .image-text, .text-image {
+    width: 95%;
+   .text-right, .text-left{
+     h2 {
+       font: normal normal bold 50px/60px Open Sans;
+     }
+   }
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
   .bg-rot {
     width: 90%;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left, .text-right, .image-left, .image-right {
+    width: 100%;
+  }
+  .image-text, .text-image {
+    width: 95%;
+  }
+  .box .ce_text {
+    width: 33%;
+    p strong {
+      font: normal normal 600 21px/30px Open Sans;
+    }
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 1550px) {
+   .rounded {
+    background-image: none;
+  }
+  .bg-white {
+    background-size: 150px;
   }
 }
 
@@ -1123,6 +1171,7 @@
   .image-text, .text-image {
     max-width: $max-width;
     margin: 0 auto;
+    width: 100%;
   }
   .image-left, .image-right {
     width: 100%;
@@ -1305,6 +1354,7 @@
     margin-top: 40px;
   }
 }
+
 @media screen and (max-height: 1000px) {
   .banner-image .header-image img {
    /* height: 100vh;*/
