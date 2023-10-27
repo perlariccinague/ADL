@@ -94,8 +94,8 @@
   h2 {
     font: normal normal 600 70px/80px Open Sans;
     text-transform: uppercase;
-   /* text-shadow: 3px 2px 20px #0000007A;*/
-    text-shadow: 2px 2px 11px #000000BD;
+   /* text-shadow: 2px 2px 11px #000000BD;*/
+    text-shadow: 10px 8px 20px #000;
   }
   p {
     font: normal normal 600 30px/50px Open Sans;
@@ -148,7 +148,6 @@
 }
 .bg-finance {
   background: #FFB641 no-repeat;
-  padding-bottom: 80px;
 }
 
 .bg-rot {
@@ -375,16 +374,13 @@
 }
 
 .text-left, .text-right {
-  width: 64%;
+  width: 55%;
 }
 
 .text-right {
   text-align: right;
-  /*margin-right: 24%;*/
 }
-.text-left {
- /* margin-left: 24%;*/
-}
+
 .text-image {
   float: right;
 }
@@ -397,7 +393,7 @@
 
 .text-image .image-right {
   img {
-    border-radius: 130px 130px 0 0;
+    border-radius: 130px 0 0 0;
   }
 }
 
@@ -410,7 +406,7 @@
   .image_container {
    /* margin-bottom: -10px;*/
     img {
-      border-radius: 130px 0;
+      border-radius: 0 0 130px 0;
     }
   }
 
@@ -419,9 +415,13 @@
   .image_container {
     margin-bottom: -10px;
     img {
-      border-radius: 130px 0 0 0;
+      border-radius: 130px 0 0 ;
     }
   }
+}
+
+.image-text #rounded-left.image-left .image_container {
+  margin-bottom: -10px;
 }
 
 
@@ -969,10 +969,11 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   .image-text, .text-image {
     width: 95%;
    .text-right, .text-left{
+     width: 64%;
      h2 {
        font: normal normal bold 50px/60px Open Sans;
      }

@@ -1,22 +1,28 @@
 @import "variables";
 
 #footer {
-  background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
-  border-top-right-radius: 150px;
+ /* background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
+  border-top-right-radius: 150px;*/
   .inside {
- /*   !*background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;*!
-    background: url("/files/assets/layout/Footer_ADL.webp") no-repeat;
-!*    border-top-right-radius: 150px;*!
+    background: transparent linear-gradient(130deg, #BB2631 0%, #5E1319 100%) 0% 0% no-repeat padding-box;
+    border-top-right-radius: 150px;
+    /*background: url("/files/assets/layout/Footer_ADL.webp") no-repeat;
+    border-top-right-radius: 150px;*!
     width: 100%;
-    background-size: 100%;*/
-    clear: both;
+    background-size: 100%;
+    clear: both;*/
     .bg-footer {
       background: url("/files/assets/layout/stier und bär.svg") no-repeat right bottom;
     }
   }
 }
 
+.clear-footer-immo #footer {
+  background: #ffb641;
+}
 
+
+/*
 .clear-footer #footer {
   clear: none;
   margin-top: -130px;
@@ -28,6 +34,7 @@
   top: -130px;
   position: relative;
 }
+*/
 
 .footer-top {
   color: white;
