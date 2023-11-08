@@ -750,7 +750,7 @@
 .bg-yellow-left {
   .contain-new {
     background: transparent linear-gradient(143deg, #FFB641 0%, #E19214 100%) no-repeat;
-    border-top-right-radius: 150px ;
+    border-radius: 0 150px 0 0;
     .ce_text {
       h2 {
         color: $rot;
@@ -877,7 +877,7 @@
     img {
       width: 600px;
       margin-bottom: 50px;
-      filter: drop-shadow(12px 0 14px rgba(0, 0, 0, 0.5));
+      /*filter: drop-shadow(12px 0 14px rgba(0, 0, 0, 0.5));*/
     }
   }
   p {
@@ -1353,6 +1353,19 @@
   }
   .jobs .ce_text p a::after {
     margin-top: 40px;
+  }
+
+  .benefit-top .ce_text.left, .benefit-bottom #right-box {
+    p {
+      width: 100%;
+      a {
+        justify-content: center;
+      }
+    }
+  }
+
+  .desktop-only {
+    display: none;
   }
 }
 

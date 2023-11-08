@@ -11,7 +11,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background: url("/files/assets/layout/ecke.svg");*/
-
     }
   }
 }
@@ -150,20 +149,40 @@
     background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
     position: relative;
     overflow: visible;
-    &:after {
+   /* &:after {
       content: "";
       position: absolute;
-      background: transparent linear-gradient(116deg, #6E161D 0%, #63141A 100%) no-repeat;
+      !*background: transparent linear-gradient(116deg, #6E161D 0%, #63141A 100%) no-repeat;*!
+      background: transparent linear-gradient(180deg, #72171e 100%, #6A151C 0%) no-repeat;
       height: 139px;
       width: 147px;
-      right: 10vw;
+      right: 20%;
       background-size: 150px;
-      bottom: -93px;
+      bottom: -40px;
       box-sizing: border-box;
       border-radius: 0 0 35px 0;
-    }
+      max-width: $max-width;
+    }*/
   }
 }
+
+.mobile_menu_active body .menu-icon {
+  position: relative;
+  width: 90%;
+  max-width: 1130px;
+  margin: 0 auto;
+  .icon-bg {
+    height: 139px;
+    width: 147px;
+    bottom: -40px;
+    box-sizing: border-box;
+    border-radius: 0 0 35px 0;
+    position: absolute;
+    right: 0;
+    background: transparent linear-gradient(180deg, #72171e 100%, #6A151C 0%) no-repeat;
+  }
+}
+
 
 @media screen and (max-height: 1000px) {
   .navigation {

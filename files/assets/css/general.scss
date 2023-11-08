@@ -203,7 +203,16 @@ ul, li {
       }
     }
   }
+  #progress {
+    bottom: 25px;
+    right: 50px;
+    height: 60px;
+    width: 60px;
+    transform: translateX(50%);
+  }
 }
+
+
 
 
 
