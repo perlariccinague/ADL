@@ -5,6 +5,7 @@
   position: absolute;
   .inner {
     background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
+    // background-image: url('../layout/menü-Background.png');
     &:after {
      /* content: "";
       position: absolute;
@@ -35,15 +36,20 @@
   margin: 70px auto;
   .mod_navigation {
     overflow: visible;
+    > ul > li > a {
+      padding: 20px 8px;
+    }
     ul {
       max-width: 300px;
       li {
-        padding: 20px 8px;
+
         position: relative;
         z-index: 10;
         opacity: 1;
         /*overflow: hidden;*/
         a {
+          display: block;
+          width: 100%;
           color: white;
           text-transform: uppercase;
           font: normal normal 600 20px/28px Open Sans;
@@ -146,7 +152,11 @@
 
 .mobile_menu_active body #mobile-menu-1.mobile_menu {
   .inner {
-    background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
+    //background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
+    background: url("../layout/menü-Background.png") no-repeat 0%/contain;
+    background-color: transparent;
+    background-size: 100%;
+    background-position: 0 0;
     position: relative;
     overflow: visible;
    /* &:after {
