@@ -31,22 +31,31 @@
       object-fit: cover;
     }
     figcaption {
-      top: 293px;
+      top: 305px;
       box-sizing: border-box;
       position: absolute;
       width: 100%;
       padding: 0 1rem;
       overflow: hidden;
-      height: 23%;
+      height: 20%;
       background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
       border-top-right-radius: 50px;
       transition: height .3s ease-out;
       p {
         color: white;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.8em;
+
+        a {
+          color: white;
+          text-transform: initial;
+          transition: color 250ms;
+          &:hover {
+            color: $rot;
+          }
+        }
         &:first-child {
-          font-size: 20px;
+          font-size: 18px;
           text-transform: uppercase;
           line-height: 1.5em;
         }
@@ -124,6 +133,17 @@
 @media screen and (max-width: 860px)  {
   .staff-item, .specialists .staff-item {
     width: 100%;
+  }
+
+  .staff-item .figure figcaption {
+    height: 46%;
+    top: 235px;
+    p {
+      font-size: 17px;
+      &:not(:first-child) {
+        display: none;
+      }
+    }
   }
 }
 

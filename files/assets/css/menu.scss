@@ -6,13 +6,6 @@
   .inner {
     background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
     // background-image: url('../layout/menü-Background.png');
-    &:after {
-     /* content: "";
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: url("/files/assets/layout/ecke.svg");*/
-    }
   }
 }
 .inner .header {
@@ -81,6 +74,8 @@
           color: white;
           font: normal normal 600 20px/28px Open Sans;
           text-transform: uppercase;
+          display: block;
+          padding: 10px 10px;
         }
       }
       &.level_2 {
@@ -93,7 +88,7 @@
           width: 100%;
           overflow: visible;
           a, strong {
-            text-transform: capitalize;
+            text-transform: initial;
             position: relative;
             transition: color 250ms;
             &:before {
@@ -114,6 +109,9 @@
           }
           &:hover:before{
             transform: none ;
+          }
+          strong.active {
+            padding: 0
           }
         }
 
@@ -142,9 +140,9 @@
   display: none !important;
 }
 
-.mobile_menu_active body {
+/*.mobile_menu_active body {
   overflow-y: hidden;
-}
+}*/
 
 .mobile_menu.active.position_top {
   box-shadow: none;
@@ -152,27 +150,13 @@
 
 .mobile_menu_active body #mobile-menu-1.mobile_menu {
   .inner {
-    //background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
-    background: url("../layout/menü-Background.png") no-repeat 0%/contain;
+    background: transparent linear-gradient(116deg, #BB2631 0%, #5E1319 100%) no-repeat;
+    /*background: url("../layout/menü-Background.png") no-repeat 0%/contain;
     background-color: transparent;
     background-size: 100%;
-    background-position: 0 0;
+    background-position: 0 0;*/
     position: relative;
     overflow: visible;
-   /* &:after {
-      content: "";
-      position: absolute;
-      !*background: transparent linear-gradient(116deg, #6E161D 0%, #63141A 100%) no-repeat;*!
-      background: transparent linear-gradient(180deg, #72171e 100%, #6A151C 0%) no-repeat;
-      height: 139px;
-      width: 147px;
-      right: 20%;
-      background-size: 150px;
-      bottom: -40px;
-      box-sizing: border-box;
-      border-radius: 0 0 35px 0;
-      max-width: $max-width;
-    }*/
   }
 }
 

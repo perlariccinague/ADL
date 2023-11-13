@@ -170,12 +170,55 @@
   }
 }
 
+.text-contain.job {
+  margin-bottom: 80px;
+  p {
+    text-align: left;
+    font-style: normal;
+    a {
+      border-radius: 25px;
+      padding: 10px 25px;
+      color: #bb2631;
+      display: inline-block;
+      border: 2px solid #BB2631;
+      text-transform: uppercase;
+      transition: background-color 250ms, color 250ms;
+      &:hover {
+        color: white;
+        background: $rot;
+      }
+    }
+  }
+}
+
+
 .text-contain {
   max-width: 800px;
   margin: 50px auto;
+  h2 {
+    font: normal normal normal 28px/36px Open Sans;
+    color: $rot;
+    text-transform: uppercase;
+  }
   p {
     text-align: center;
     font: italic normal normal 24px/36px Open Sans;
+  }
+  ul {
+    li {
+      font: normal normal normal 22px/34px Open Sans;
+      position: relative;
+      margin-left: 35px;
+      &:before {
+        color: #b2242f;
+        font-weight: 400;
+        content: "»";
+        position: absolute;
+        margin-left: -28px;
+        font-size: 40px;
+        margin-top: -3px;
+      }
+    }
   }
 }
 
@@ -989,7 +1032,7 @@
   .text-right {
     text-align: right;
   }
-  .text-left, .text-right, .image-left, .image-right {
+  .text-image .text-left, .image-text .text-right, .image-left, .image-right {
     width: 100%;
   }
   .image-text, .text-image {
@@ -1082,7 +1125,7 @@
    /* height: 85vh;*/
     .teaser {
       h2 {
-        font: normal normal 600 30px/34px Open Sans;
+        font: normal normal 600 23px/34px Open Sans;
       }
       p {
         font: normal normal 600 22px/28px Open Sans;
@@ -1097,7 +1140,7 @@
     width: 100%;
     .teaser-contain {
       h2 {
-        font: normal normal 600 30px/34px Open Sans;
+        font: normal normal 600 25px/34px Open Sans;
         word-break: break-word;
       }
       p {
@@ -1182,6 +1225,7 @@
   }
   .image-text .text-right, .text-image .text-left {
     text-align: left;
+    width: 90%;
     h2 {
       font: normal normal 600 28px/34px Open Sans;
       text-align: center;
