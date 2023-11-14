@@ -1129,9 +1129,20 @@
     }
   }
   .header-teaser {
-    transform: translate(-50%, -75%);
+    transform: none;
+    top: 0;
+    left: 0;
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: end;
    /* height: 85vh;*/
     .teaser {
+      position: relative;
+      transform: none;
+      height: auto;
+      margin: 0 auto;
+      left: 0;
       h2 {
         font: normal normal 600 23px/34px Open Sans;
       }
@@ -1149,7 +1160,7 @@
     .teaser-contain {
       h2 {
         font: normal normal 600 25px/34px Open Sans;
-        word-break: break-word;
+        // word-break: break-word;
       }
       p {
         font: italic normal normal 18px/22px Open Sans;
@@ -1165,7 +1176,8 @@
     margin: 30px auto;
     .ce_text {
       width: 100%;
-      height: 300px;
+      height: auto;
+      margin: 40px 0;
       p {
         font: normal normal normal 19px/28px Open Sans;
         strong {
@@ -1182,12 +1194,15 @@
   .bg-gray .contain, .bg-yellow-new .contain-new,
   .teaser-bg-gray, .bg-gray-new .contain-new,
   .bg-yellow-left .contain-new {
+    .ce_text {
+      margin: 0 auto;
+    }
     border-top-left-radius: 70px;
   }
 
   .bg-gray .contain {
     .ce_text {
-      padding: 30px 0;
+      padding: 50px 0;
       margin-bottom: 0;
       p {
         font: normal normal normal 19px/28px Open Sans;
@@ -1249,7 +1264,7 @@
     border-radius: 50px 0 0 0;
   }
   .rounded .image-text .text-right h2 {
-    word-break: break-all;
+    // word-break: break-all;
   }
   .image-text #rounded-left.image-left .image_container img {
     border-radius: 50px 0;
@@ -1278,6 +1293,7 @@
     margin: 100px auto 20px;
   }
   .rounded.yellow .headline-contact {
+    width: 80%;
    h2 {
      font: normal normal 600 30px/34px Open Sans;
    }
@@ -1291,7 +1307,7 @@
 
   .block-teaser {
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 50px 0;
     p {
       font: normal normal normal 19px/28px Open Sans;
     }
@@ -1338,7 +1354,7 @@
     .ce_text {
       h2 {
         font: normal normal 600 30px/36px Open Sans;
-        word-break: break-all;
+        // word-break: break-all;
       }
       p {
         font: normal normal normal 19px/28px Open Sans;
@@ -1394,8 +1410,11 @@
     margin: 30px auto 50px;
     .ce_text {
       width: 100%;
-      p a {
-        height: 130px;
+      p {
+        font-size: 16px;
+        a {
+          height: 130px;
+        }
       }
     }
   }

@@ -1,5 +1,9 @@
 @import "variables";
 
+.mobile-only {
+  display: none !important;
+}
+
 body {
   font-family: 'open-sans', sans-serif;
 }
@@ -191,6 +195,14 @@ ul, li {
 }
 
 @media screen and (max-width: 860px) {
+  .mobile-only {
+    display: initial !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
   p {
     font: normal normal normal 19px/28px Open Sans;
   }

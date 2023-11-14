@@ -231,11 +231,6 @@
         border-bottom: 2px solid white;
         padding-bottom: 15px;
         margin-bottom: 10px;
-        & > div {
-          font: normal normal normal 17px/22px Open Sans;
-          color: white;
-          text-transform: uppercase;
-        }
         .mod_customnav {
          /* margin: 10px 30px;*/
           li {
@@ -254,6 +249,15 @@
                 height: 28px;
                 background: url("/files/assets/layout/before.svg") no-repeat;
                 background-size: 12px;
+              }
+            }
+            &:first-child {
+              margin-left: 0;
+              text-transform: uppercase;
+              a {
+                &:before {
+                  position: initial;
+                }
               }
             }
           }
