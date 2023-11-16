@@ -1124,6 +1124,7 @@
   }
   .banner-image {
     position: relative;
+    margin-bottom: 70px;
     .header-image img {
       height: 85vh;
     }
@@ -1235,6 +1236,10 @@
     margin: 10px auto;
   }
 
+  .text-image {
+    flex-direction: column-reverse;
+  }
+
   .image-text, .text-image {
     max-width: $max-width;
     margin: 0 auto;
@@ -1242,8 +1247,12 @@
   }
   .image-left, .image-right {
     width: 100%;
-    img {
-      height: 75vh;
+    height: 40vh;
+    figure {
+      height: 100%;
+      img {
+        height: 100%;
+      }
     }
   }
   .image-text .text-right, .text-image .text-left {

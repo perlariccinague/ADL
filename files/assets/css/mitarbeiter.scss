@@ -35,7 +35,7 @@
       box-sizing: border-box;
       position: absolute;
       width: 100%;
-      padding: 0 1rem;
+      padding: 0 1rem 40px;
       overflow: hidden;
       height: 20%;
       background: transparent linear-gradient(232deg, #A3B4B5 0%, #525A5B 100%) no-repeat ;
@@ -68,7 +68,7 @@
     &:hover {
       height: 690px;
       figcaption {
-        height: 65vh;
+        height: auto;
       }
     }
   }
@@ -80,7 +80,7 @@
 
 
 .board .staff-item .figure:hover figcaption {
-  height: 100vh;
+  height: auto;
 }
 .board .staff-item .figure figcaption p {
   line-height: 1.6em;
@@ -154,6 +154,7 @@
     figcaption {
       height: auto;
       bottom: 0;
+      padding-bottom: 0;
       top: initial;
       p {
         font-size: 16px;
