@@ -1447,6 +1447,10 @@
   .desktop-only {
     display: none;
   }
+
+  body.homepage .banner-image {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-height: 1000px) {
