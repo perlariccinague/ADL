@@ -1,0 +1,6 @@
+<?php
+	foreach($this->articles as $article) {
+		echo $article;
+	}
+?>
+
