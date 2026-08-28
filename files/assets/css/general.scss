@@ -16,6 +16,20 @@ ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
+  font: normal normal normal 24px/36px 'Open Sans';
+  a {
+    color: $brown;
+    transition: color 250ms;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.ce_text.privacy {
+  ul li {
+    list-style: inside;
+  }
 }
 
 .header, .bg-gray .ce_text, .bg-white .ce_text,

@@ -1,0 +1,25 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <figure class="<?= $this->containerClass ?>">
+    <?php if ($this->isVideo): ?>
+      <video<?= $this->size ?><?php if ($this->poster): ?> poster="<?= $this->poster ?>"<?php endif; ?><?php if ($this->preload): ?> preload="<?= $this->preload ?>"<?php endif; ?> <?= implode(' ', $this->attributes) ?>>
+        <?php foreach ($this->files as $file): ?>
+          <source type="<?= $file->mime ?>" src="<?= $file->path.$this->range ?>">
+        <?php endforeach; ?>
+      </video>
+    <?php else: ?>
+      <audio<?php if ($this->preload): ?> preload="<?= $this->preload ?>"<?php endif; ?> <?= implode(' ', $this->attributes) ?>>
+        <?php foreach ($this->files as $file): ?>
+          <source type="<?= $file->mime ?>" src="<?= $file->path ?>">
+        <?php endforeach; ?>
+      </audio>
+    <?php endif; ?>
+    <p>Im Interview mit FinanceNewsTV // Ihr Partner für Video [&] Interview beleuchtet ADLATUS AG Vorstand Michael Dutz die aktuellen Entwicklungen und Trends an den globalen Börsen: Was passiert in Frankreich und Europa? Lohnt sich ein Einstieg in China? Wie geht es mit der Rally in den USA weiter?<br>Unsere Antworten finden Sie im Video – aufgenommen auf dem Börsenparkett in Frankfurt.</p>
+    <?php if ($this->caption): ?>
+      <figcaption class="caption"><?= $this->caption ?></figcaption>
+    <?php endif; ?>
+  </figure>
+
+<?php $this->endblock(); ?>
