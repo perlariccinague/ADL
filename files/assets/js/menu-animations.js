@@ -66,7 +66,6 @@ const customNavigationItems = '.mobile_menu .inner .mod_customnav ul li';
 
 const allNavigationItems = `${navigationItems}, ${customNavigationItems}`;
 
-// État initial
 gsap.set(allNavigationItems, {
     right: '100%',
     opacity: 0
