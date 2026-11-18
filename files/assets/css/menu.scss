@@ -1,6 +1,6 @@
 @import "variables";
 
-#mobile-menu-1.mobile_menu {
+#mobile-menu-1.mobile_menu, #mobile-menu-31.mobile_menu {
   z-index: 205;
   position: absolute;
   .inner {
@@ -27,7 +27,7 @@
   width: 90%;
   max-width: 800px;
   margin: 70px auto;
-  .mod_navigation {
+  :is(.mod_navigation, .mod_customnav)  {
     overflow: visible;
     > ul > li > a {
       padding: 20px 8px;
